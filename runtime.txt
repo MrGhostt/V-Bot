@@ -1,2 +1,2 @@
 python-3.6.6
-
+youtube-dl==2018.9.1
