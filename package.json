@@ -7,6 +7,6 @@
     "start": "node main.py"
   },
   "dependencies": {
-    "discord.js": "11.1.0",
+    "discord.py": "11.1.0",
     }
 }
