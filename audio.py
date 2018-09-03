@@ -7,7 +7,7 @@ from discord.ext.commands import Bot
 
 
 bot=commands.Bot(command_prefix='a.')
-
+TOKEN= 'NDgyNzAzODQzNDM2NjU4Njk4.Dm7jTQ.04-gopQ-vh3iftOegqKlNYZPk18'
 from discord import opus
 OPUS_LIBS = ['libopus-0.x86.dll', 'libopus-0.x64.dll',
              'libopus-0.dll', 'libopus.so.0', 'libopus.0.dylib']
@@ -80,4 +80,4 @@ async def stop(ctx):
 
 
 
-bot.run(os.environ['NDgyNzAzODQzNDM2NjU4Njk4.Dm7WuQ.g8ghWetGRwEViDbfPgi9DnahrjM'])
+bot.run(TOKEN)
