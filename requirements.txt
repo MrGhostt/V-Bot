@@ -1,2 +1,2 @@
 discord.py
-youtube-dl.py
+youtube-dl-2018.09.01.tar.gz
