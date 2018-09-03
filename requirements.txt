@@ -1,2 +1,2 @@
 discord.py
-youtube-dl.py
+youtube-dl==2018.9.1.py
