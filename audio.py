@@ -215,5 +215,5 @@ app = SeaofBTCapp()
 async def open_window():
     app.mainloop()
 
-bot.loop.create_task(open_window())
+asyncio.run_coroutine_threadsafe(open_window(), bot.loop)
 bot.run(TOKEN)
