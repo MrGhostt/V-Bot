@@ -14,6 +14,7 @@ import json
 LARGE_FONT = ("Verdana", 12)
 bot = commands.Bot(command_prefix='a.')
 TOKEN = 'NDgyNzAzODQzNDM2NjU4Njk4.DsYUdA.kOt1_Z6MBPD4cfJReWBZHYLMVvQ'
+
 from discord import opus
 OPUS_LIBS = ['libopus-0.x86.dll', 'libopus-0.x64.dll',
              'libopus-0.dll', 'libopus.so.0', 'libopus.0.dylib']
@@ -82,7 +83,7 @@ async def resume(ctx):
 async def volume(ctx, vol):
     vol = float(vol)
     vol = player.volume = vol
-    ä
+    
 
 
 @bot.command(pass_context=True)
@@ -211,7 +212,7 @@ class PageFour(tk.Frame):
 app = SeaofBTCapp()
 
 
-async def open_window()
+async def open_window():
     app.mainloop()
 
 bot.loop.create_task(open_window())
