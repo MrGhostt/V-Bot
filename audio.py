@@ -1,3 +1,4 @@
+
 import discord
 import asyncio
 import youtube_dl
@@ -7,9 +8,10 @@ from discord.ext.commands import Bot
 from playsound import playsound
 
 import tkinter as tk
-import ttk
+from tkinter import ttk
 import urllib
 import json
+from threading import Thread
 
 LARGE_FONT = ("Verdana", 12)
 bot = commands.Bot(command_prefix='a.')
@@ -83,7 +85,6 @@ async def resume(ctx):
 async def volume(ctx, vol):
     vol = float(vol)
     vol = player.volume = vol
-    
 
 
 @bot.command(pass_context=True)
@@ -212,8 +213,11 @@ class PageFour(tk.Frame):
 app = SeaofBTCapp()
 
 
-async def open_window():
+def open_bot():
     app.mainloop()
 
-asyncio.run_coroutine_threadsafe(open_window(), bot.loop)
+
+Thread(target = open_bot(), name = 'Gui_thread').start()
 bot.run(TOKEN)
+#asyncio.run_coroutine_threadsafe(open_window(), bot.loop)
+
