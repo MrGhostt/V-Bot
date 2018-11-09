@@ -93,15 +93,19 @@ async def stop(ctx):
     voice_client = bot.voice_client_in(server)
     await voice_client.disconnect()
 
-
 @bot.command(pass_context=True)
 async def gui(ctx):
-    controller.show_frame(PageOne)
+    app.mainloop()
+
+@bot.command(pass_context=True)
+async def pong(ctx):
+    bot.say("Pong")
+
 
 ############################ GUI ############################################
 
 
-class SeaofBTCapp(tk.Tk):
+class Disco_bot(tk.Tk):
     def __init__(self, *args, **kwargs):  # This is a method
 
         tk.Tk.__init__(self, *args, **kwargs)
@@ -127,6 +131,7 @@ class SeaofBTCapp(tk.Tk):
         frame = self.frames[cont]
         frame.tkraise()
 
+    
 
 class StartPage(tk.Frame):
     def __init__(self, parent, controller):
@@ -165,6 +170,7 @@ class PageOne(tk.Frame):
         button4.pack()
 
 
+
 class PageTwo(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
@@ -172,7 +178,7 @@ class PageTwo(tk.Frame):
         label.pack(pady=10, padx=10)
 
         button1 = ttk.Button(self, text="Easiest Money",
-                             command=lambda: playsound("https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/13/Chat_wheel_2018_easiest_money.mp3"))
+                             command=pong)
         button1.pack()
         button2 = ttk.Button(self, text="Echo Slam",
                              command=lambda: playsound("https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/7/73/Chat_wheel_2018_echo_slama_jama.mp3"))
@@ -210,14 +216,12 @@ class PageFour(tk.Frame):
         button1.pack()
 
 
-app = SeaofBTCapp()
 
-
-def open_bot():
-    app.mainloop()
-
-
-Thread(target = open_bot(), name = 'Gui_thread').start()
+app = Disco_bot()
 bot.run(TOKEN)
-#asyncio.run_coroutine_threadsafe(open_window(), bot.loop)
+
+
+
+
+
 
