@@ -15,7 +15,7 @@ from threading import Thread
 
 LARGE_FONT = ("Verdana", 12)
 bot = commands.Bot(command_prefix='a.')
-TOKEN = 'NDgyNzAzODQzNDM2NjU4Njk4.DsYUdA.kOt1_Z6MBPD4cfJReWBZHYLMVvQ'
+TOKEN = 'NDgyNzAzODQzNDM2NjU4Njk4.Dsc9QQ.kPnPW7W5yJx9dU7ZBRu5PF1p0RE'
 
 from discord import opus
 OPUS_LIBS = ['libopus-0.x86.dll', 'libopus-0.x64.dll',
