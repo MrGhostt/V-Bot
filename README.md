@@ -1,2 +1,1 @@
-# V-Bot
-Bot
+# Custom Discord Bot
